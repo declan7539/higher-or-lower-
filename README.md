@@ -2,6 +2,10 @@
 
 A lightweight browser game where you compare two companies and guess which one has the higher annual revenue.
 
+## Play online
+
+Open [Higher or Lower](https://declan7539.github.io/higher-or-lower-/).
+
 ## Run locally
 
 From the project root, start a local static server:
