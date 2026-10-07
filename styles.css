@@ -161,6 +161,41 @@ h1 {
   font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
+.business-details {
+  margin-bottom: 18px;
+  padding: 10px 12px;
+  border: 1px solid rgba(158, 197, 214, 0.18);
+  border-radius: 8px;
+  background: rgba(7, 19, 31, 0.28);
+}
+
+.business-details summary {
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.business-details summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.business-details p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.business-details strong {
+  color: var(--text);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
 .metric-block {
   display: flex;
   flex-direction: column;

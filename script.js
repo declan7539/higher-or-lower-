@@ -26,10 +26,14 @@ const feedbackEl = document.getElementById('feedback');
 const leftNameEl = document.getElementById('left-name');
 const leftIndustryEl = document.getElementById('left-industry');
 const leftValueEl = document.getElementById('left-value');
+const leftValuationEl = document.getElementById('left-valuation');
+const leftDetailsEl = document.getElementById('left-details');
 
 const rightNameEl = document.getElementById('right-name');
 const rightIndustryEl = document.getElementById('right-industry');
 const rightValueEl = document.getElementById('right-value');
+const rightValuationEl = document.getElementById('right-valuation');
+const rightDetailsEl = document.getElementById('right-details');
 
 const higherBtn = document.getElementById('higher-btn');
 const lowerBtn = document.getElementById('lower-btn');
@@ -48,6 +52,10 @@ const state = {
 
 function formatMoney(value) {
   return `$${value.toLocaleString()}M`;
+}
+
+function formatValuation(value) {
+  return `$${(value / 1000).toFixed(1)}B`;
 }
 
 function getRandomCompany(exclude = []) {
@@ -70,10 +78,14 @@ function renderRound() {
   leftNameEl.textContent = state.leftCompany.name;
   leftIndustryEl.textContent = state.leftCompany.industry;
   leftValueEl.textContent = leftOwner;
+  leftValuationEl.textContent = formatValuation(state.leftCompany.valuation);
+  leftDetailsEl.open = false;
 
   rightNameEl.textContent = state.rightCompany.name;
   rightIndustryEl.textContent = state.rightCompany.industry;
   rightValueEl.textContent = rightOwner;
+  rightValuationEl.textContent = formatValuation(state.rightCompany.valuation);
+  rightDetailsEl.open = false;
 
   promptText.textContent = 'Which business has the higher annual revenue?';
 
